@@ -1,15 +1,19 @@
 const router = require("express").Router();
-const passport = require("passport");
 
-const knexfile = require("../knexfile").development;
-const knex = require("knex")(knexfile);
+const isLoggedIn = (req, res, next) => {
+  if (req.isAuthenticated()) {
+    return next();
+  } else {
+    console.log('session info', req.session);
+    console.log('you are not authenticated');
+  }
+}
 
 //home page
-router.get('/user', async (req, res) => {
-  console.log('request received!', req.user)
+router.get('/user', isLoggedIn, async (req, res) => {
   if (req.user) {
 			const email = req.user.email;
-			res.send(`Welcome, logged in with email ${email}`);
+			res.send(`Logged in with email ${email}`);
 		} else {
 			res.send("Welcome, guest");
 		}  

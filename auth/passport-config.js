@@ -7,11 +7,13 @@ const knex = require('knex')(knexfile);
 
 //defines how user object is stored in a session
 passport.serializeUser((user, done) => {
+  console.log('serialized! user is ', user);
   done(null, user.id);
 });
 
 //takes id stored in the session and retrieves corresponding user from the database
 passport.deserializeUser(async (id, done) => {
+  console.log('deserializing');
   const user = await knex('users').where({ id }).first();
   return user ? done(null, user) : done(null, false);
 })

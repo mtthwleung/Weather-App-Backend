@@ -1,9 +1,6 @@
 const router = require('express').Router();
 const passport = require('passport');
 
-const knexfile = require('../knexfile').development;
-const knex = require('knex')(knexfile);
-
 //signup page
 router.post('/signup', (req, res, next) => {
   passport.authenticate('local-signup', (err, user, info) => {
