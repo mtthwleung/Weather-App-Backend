@@ -41,8 +41,8 @@ app.use('/', homeRoutes);
 const weatherRoutes = require('./routers/weather');
 app.use('/weather', weatherRoutes);
 
-
-
 app.listen(8000, () => {
-  console.log('Server listening on port 8000!')
+  // console.log('Server listening on port 8000!')
 });
+
+module.exports = app;
