@@ -72,6 +72,40 @@ const weather = {
 			precipitation: 20,
 		},
 	},
+	"hong kong": {
+		day0: {
+			temperature: 22,
+			lowTemp: 20,
+			highTemp: 25,
+			weather: "Cloudy",
+			humidity: 30,
+			precipitation: 20,
+		},
+		day1: {
+			temperature: 24,
+			lowTemp: 23,
+			highTemp: 28,
+			weather: "Sunny",
+			humidity: 40,
+			precipitation: 0,
+		},
+		day2: {
+			temperature: 26,
+			lowTemp: 24,
+			highTemp: 30,
+			weather: "Sunny",
+			humidity: 40,
+			precipitation: 10,
+		},
+		day3: {
+			temperature: 24,
+			lowTemp: 23,
+			highTemp: 27,
+			weather: "Rainy",
+			humidity: 90,
+			precipitation: 80,
+		},
+	},
 };
 
 const getWeather = city => {
