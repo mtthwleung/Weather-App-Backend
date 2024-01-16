@@ -5,7 +5,7 @@ This backend is built with Node.js and queries with a PostgreSQL database. Befor
 To run the backend:
 1. `npm install` to install dependencies
 2. create a .env file in the main directory, with values for `DATABASE`, `USERNAME`, and `PASSWORD`. These should match their corresponding values on Postgres. For example, <br>DATABASE='weatherapp', <br> USERNAME='testuser', <br>PASSWORD='123abc'
-<br><br>
+<br>
 3. Run `npx knex migrate:latest` to create a table in the database, used for storing user information.
 4. Run `node app.js` or `node app` to start the server.
 
