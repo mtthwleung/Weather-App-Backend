@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const weather = require("../weatherData");
+const weather = require("../data/weatherData");
 
 const getWeather = (city) => {
 	if (weather[city]) {
