@@ -8,7 +8,7 @@ To run the backend:
 3. Run `npx knex migrate:latest` to create a table in the database, used for storing user information.
 4. Run `node app.js` or `node app` to start the server.
 
-Unit Tests
+Unit Tests<br>
 There are currently unit tests for the routes in `weather.js` and `auth.js`.
 The test for the weather routes passes, but the test for auth does not (the auth itself, however, works as intended)
 
